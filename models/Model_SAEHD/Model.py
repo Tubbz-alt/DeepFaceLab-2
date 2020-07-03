@@ -22,9 +22,9 @@ class SAEHDModel(ModelBase):
             lowest_vram = device_config.devices.get_worst_device().total_mem_gb
 
         if lowest_vram >= 4:
-            suggest_batch_size = 8
+            suggest_batch_size = 1
         else:
-            suggest_batch_size = 4
+            suggest_batch_size = 1
 
         yn_str = {True:'y',False:'n'}
         min_res = 64
