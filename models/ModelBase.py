@@ -456,7 +456,7 @@ class ModelBase(object):
         self.loss_history.append ( [float(loss[1]) for loss in losses] )
 
         if (not io.is_colab() and self.iter % 10 == 0) or \
-           (io.is_colab() and self.iter % 100 == 0):
+           (io.is_colab() and self.iter % 1000 == 0):
             plist = []
 
             if io.is_colab():
